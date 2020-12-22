@@ -13,7 +13,7 @@ else
 fi
 
 setxkbmap it
-brightnessctl -q set 50%
+brightnessctl -q set 25%
 xrdb ~/.Xresources
 # xsetroot -cursor_name left_ptr
 
