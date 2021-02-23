@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	dmenu_run -b -i -l 5 -fn "Hermit" -nb "#011627" -nf "#d6deeb" -sb "#0d486e" -sf "#ffffff"
+	~/.config/sxhkd/dmenu_run_i
 
 # make sxhkd reload its configuration files:
 super + Escape
