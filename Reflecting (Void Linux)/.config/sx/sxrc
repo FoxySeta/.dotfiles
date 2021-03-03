@@ -3,14 +3,15 @@
 intern=LVDS-1
 extern=HDMI-1
 
-xrandr --output $intern --primary
 if xrandr | grep "$extern connected"
 then
-    xrandr --output $extern --left-of $intern
-    hsetroot -root -cover ~/.config/wallpaper/Reflections_of_the_night_sky.png
+    main=$extern
+    hsetroot -root -cover ~/.config/wallpapers/Reflections_of_the_night_sky.png
 else
-    hsetroot -cover ~/.config/wallpaper/Reflections_of_the_night_sky_16_9.png
+    main=$intern
+    hsetroot -cover ~/.config/wallpapers/Reflections_of_the_night_sky_16_9.png
 fi
+xrandr --output $main --primary
 
 setxkbmap it
 brightnessctl -q set 25%
