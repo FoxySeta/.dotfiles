@@ -5,6 +5,7 @@ extern=HDMI-1
 
 if xrandr | grep "$extern connected"
 then
+    xrandr --output $intern --off
     main=$extern
     hsetroot -root -cover ~/.config/wallpapers/Reflections_of_the_night_sky.png
 else
