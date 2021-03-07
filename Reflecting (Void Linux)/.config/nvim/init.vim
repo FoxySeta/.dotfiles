@@ -29,26 +29,82 @@ set updatetime=50
 set colorcolumn=80
 set scrolloff=5
 
+call plug#begin('~/.vim/plugged')
+  " binds:
+  " - gcc = comments current line
+  " - gc = comments current selection
+  Plug 'tpope/vim-commentary'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'itchyny/lightline.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'liuchengxu/vista.vim'
+  Plug 'honza/vim-snippets'
+
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'airblade/vim-gitgutter'
+
+  Plug 'haishanh/night-owl.vim'
+call plug#end()
+
+if (has("termguicolors"))
+ set termguicolors
+endif
+syntax enable
+colorscheme night-owl
+
+let g:lightline = { 'colorscheme': 'nightowl' }
+let g:vista_default_executive = 'coc'
+
 " mappings with leader key
 let mapleader = " "
 
-" -----------------------------------------------------------------------------
-" binds
-" -----------------------------------------------------------------------------
-
 " movement and reiszing across splits
-noremap <leader>H :vertical resize +5<CR>
-noremap <leader>J :resize -5<CR>
-noremap <leader>K :resize +5<CR>
-noremap <leader>L :vertical resize -5<CR>
+noremap <C-W>H :vertical resize +5<CR>
+noremap <C-W>J :resize -5<CR>
+noremap <C-W>K :resize +5<CR>
+noremap <C-W>L :vertical resize -5<CR>
 
 " other bindings
-nnoremap <leader>p <cmd>Telescope find_files<cr>
-nnoremap <leader>f <cmd>Telescope live_grep<cr>
-nnoremap <leader>g :Goyo<CR>
+nnoremap <leader>p <cmd>GFiles<cr>
+nnoremap <leader>f <cmd>Rg<cr>
+nnoremap <leader>v <cmd>Vista!!<cr>
 
-" coc bindings
-nnoremap <silent>gd <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent>gr <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent>r <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <silent>K  <cmd>lua vim.lsp.buf.hover()<CR>
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
