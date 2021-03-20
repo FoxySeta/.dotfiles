@@ -12,7 +12,6 @@ fi
 
 LC_ALL=it_IT.utf8
 alias ls='ls --color=auto'
-alias nvim='~/Applications/nvim.appimage'
 alias vi='nvim'
 PS1='[\u@\h \W]\$ '
 eval "$(dircolors ~/.config/dir_colors)"
