@@ -7,7 +7,7 @@ Wallpaper by Teresa Hofer via [Unsplash](unsplash.com).
 
 ## Kakegurui (Windows 10)
 ![Kakegurui (Windows 10)](screenshots/kakegurui.png)
-Wallpaper by Taoru Naomura.
+Wallpapers by Taoru Naomura.
 
 ## Kaede Akamatsu (Android 10)
 
