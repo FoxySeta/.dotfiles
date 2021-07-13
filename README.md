@@ -10,4 +10,6 @@ Wallpaper by Teresa Hofer via [Unsplash](unsplash.com).
 Wallpapers by Taoru Naomura.
 
 ## Kaede Akamatsu (Android 10)
-
+![Kaede Akamatsu (Android 10)](screenshots/kaede.png)
+Wallpaper by Rui Komatsuzaki. Screensaver from Famitsu magazine cover (January
+26th, 2017).
