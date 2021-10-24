@@ -10,7 +10,6 @@ fi
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-LC_ALL=it_IT.utf8
 alias ls='ls --color=auto'
 alias vi='nvim'
 PS1='[\u@\h \W]\$ '
