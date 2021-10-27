@@ -13,7 +13,7 @@ fi
 
 alias ls='ls --color=auto'
 alias vi='nvim'
-PS1='[\u@\h \W]\$ '
+PS1='\e[0;34m\W\e[m ✏  '
 eval "$(dircolors ~/.config/dir_colors)"
 
 # opam configuration
