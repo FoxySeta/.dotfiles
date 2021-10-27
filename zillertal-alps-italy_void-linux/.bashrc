@@ -2,6 +2,7 @@
 
 PATH=$PATH:~/Applications:/opt/Discord
 BROWSER=/home/stefano/Applications/brave.AppImage
+LC_ALL=en_US.UTF-8
 
 if [ -z "${DISPLAY}" ]; then
 	sx
