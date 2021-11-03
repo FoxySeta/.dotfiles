@@ -325,6 +325,7 @@ click-right = pavucontrol
 
 [module/alsa]
 type = internal/alsa
+master-soundcard=hw:1
 
 format-volume = <ramp-volume> <label-volume>
 ramp-volume-0 = 🔈
