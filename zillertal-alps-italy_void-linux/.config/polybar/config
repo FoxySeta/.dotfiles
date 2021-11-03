@@ -81,7 +81,8 @@ dim-value = 0.4
 [bar/informative]
 inherit = bar/minimal
 
-modules-left = date backlight-acpi alsa wlan
+modules-left = date backlight-acpi alsa1 wlan
+; modules-left = date backlight-acpi alsa1 alsa2 wlan
 modules-right = filesystem battery cpu memory temperature
 
 [module/xwindow]
@@ -323,7 +324,7 @@ click-right = pavucontrol
 ;bar-volume-empty-font = 2
 ;bar-volume-empty-foreground = ${colors.foreground-alt}
 
-[module/alsa]
+[module/alsa1]
 type = internal/alsa
 master-soundcard=hw:1
 
@@ -336,7 +337,7 @@ label-volume = %percentage%%
 
 label-muted = 🔇
 
-click-right = alacritty -e alsamixer
+click-right = alacritty -e alsamixer -c 1
 
 ;bar-volume-width = 10
 ;bar-volume-foreground-0 = #55aa55
@@ -354,6 +355,11 @@ click-right = alacritty -e alsamixer
 ;bar-volume-empty = ─
 ;bar-volume-empty-font = 2
 ;bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/alsa2]
+inherit = module/alsa1
+master-soundcard=hw:2
+click-right = alacritty -e alsamixer -c 2
 
 [module/battery]
 type = internal/battery
