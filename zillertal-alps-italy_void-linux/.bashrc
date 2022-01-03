@@ -1,19 +1,19 @@
 # .bashrc
 
-PATH=$PATH:~/.cabal/bin:~/Applications
-BROWSER=/home/stefano/Applications/brave.AppImage
+BROWSER=~/Applications/brave.AppImage
+DOWNLOAD_KEYSERVER=keys.openpgp.org
+PATH=$PATH:~/.cabal/bin:~/Applications:~/.local/bin
 LC_ALL=en_US.UTF-8
+XDG_RUNTIME_DIR=/run/user/stefano
 
 if [ -z "${DISPLAY}" ]; then
 	sx
 fi
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
 alias ls='ls --color=auto'
 alias vi='nvim'
 alias xclip='xclip -selection clipboard -r'
+alias update='sudo xbps-install -Suy && sudo xbps-remove -Ooy'
 PS1='\e[0;34m\W\e[m ✏  '
 eval "$(dircolors ~/.config/dir_colors)"
 
