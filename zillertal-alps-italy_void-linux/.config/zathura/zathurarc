@@ -1,0 +1,8 @@
+# Dark mode
+set recolor
+set recolor-lightcolor \#011627
+set recolor-keephue
+set default-bg \#011627
+
+# Copy to clipbloard
+set selection-clipboard clipboard
