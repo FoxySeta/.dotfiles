@@ -16,6 +16,7 @@ alias vi='nvim'
 alias xclip='xclip -selection clipboard -r'
 alias update='sudo xbps-install -Suy && sudo xbps-remove -Ooy'
 alias run='docker start -ai'
+alias sshunibo='ssh stefano.volpe2@iago.cs.unibo.it'
 
 PS1='\e[0;34m\W\e[m ✏  '
 eval "$(dircolors ~/.config/dir_colors)"
