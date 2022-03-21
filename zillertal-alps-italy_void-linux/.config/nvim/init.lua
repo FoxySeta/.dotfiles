@@ -11,11 +11,12 @@ require'visimp'{
   languages = {
     'bash',
     'c',
+    'javascript',
     'latex', 
     'python'
   },
   lsp = {
-    nulls = {
+    nullls = {
       'formatting.black',
       'formatting.prettier',
       'formatting.latexindent'
