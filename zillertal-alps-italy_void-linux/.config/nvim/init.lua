@@ -1,6 +1,7 @@
 require'visimp'{
   defaults = {
-    foldmethod = 'marker'
+    foldmethod = 'marker',
+    tabsize = 4
   },
   diagnostics = {},
   gitsigns = {},
@@ -13,6 +14,14 @@ require'visimp'{
     'latex', 
     'python'
   },
+  lsp = {
+    nulls = {
+      'formatting.black',
+      'formatting.prettier',
+      'formatting.latexindent'
+    }
+  },
+  lspformat = {},
   lspsignature = {},
   outline = {},
   snippet = {},
@@ -20,21 +29,20 @@ require'visimp'{
 }
 
 -- diagnostics
-vim.api.nvim_set_keymap('n', '<leader>xx', '<cmd>TroubleToggle<cr>',
-  {silent = true, noremap = true}
-)
-vim.api.nvim_set_keymap('n', '<leader>xw', '<cmd>Trouble workspace_diagnostics<cr>',
-  {silent = true, noremap = true}
-)
-vim.api.nvim_set_keymap('n', '<leader>xd', '<cmd>Trouble document_diagnostics<cr>',
-  {silent = true, noremap = true}
-)
-vim.api.nvim_set_keymap('n', '<leader>xl', '<cmd>Trouble loclist<cr>',
-  {silent = true, noremap = true}
-)
-vim.api.nvim_set_keymap('n', '<leader>xq', '<cmd>Trouble quickfix<cr>',
-  {silent = true, noremap = true}
-)
-vim.api.nvim_set_keymap('n', 'gR', '<cmd>Trouble lsp_references<cr>',
-  {silent = true, noremap = true}
-)
+binds = {
+  [{ mode = 'n', bind = '<leader>xx'}] = '<cmd>TroubleToggle<cr>',
+  [{ mode = 'n', bind = '<leader>xw'}] =
+    '<cmd>Trouble workspace_diagnostics<cr>',
+  [{ mode = 'n', bind = '<leader>xd'}] =
+    '<cmd>Trouble document_diagnostics<cr>',
+  [{ mode = 'n', bind = '<leader>xl'}] = '<cmd>Trouble loclist<cr>',
+  [{ mode = 'n', bind = '<leader>xq'}] = '<cmd>Trouble quickfix<cr>',
+  [{ mode = 'n', bind = '<leader>gR'}] = '<cmd>Trouble lsp_references<cr>',
+}
+
+-- snippets
+local luasnip = require'luasnip'
+local snippet = luasnip.snippet
+local text_node = luasnip.text_node
+luasnip.snippets = {
+}
