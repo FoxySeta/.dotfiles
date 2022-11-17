@@ -1,19 +1,32 @@
 require'visimp'{
+  autopairs = {},
+  colorizer = {
+    user_default_options = {
+      tailwind = true
+    }
+  },
   defaults = {
     foldmethod = 'marker',
     tabsize = 4
   },
   diagnostics = {},
+  indentline = {},
   gitsigns = {},
+  grammarly = {},
   latex = {
     tectonic = true
   },
   languages = {
     'bash',
     'c',
+    'css',
+    'go',
+    'html',
     'javascript',
     'latex', 
-    'python'
+    'python',
+    'rust',
+    'vue'
   },
   lsp = {
     nullls = {
@@ -22,22 +35,24 @@ require'visimp'{
       'formatting.latexindent'
     }
   },
-  lspformat = {},
-  lspsignature = {},
   outline = {},
   snippet = {},
-  theme = {'haishanh/night-owl.vim', 'night-owl', 'dark'}
+  theme = {
+    package = 'haishanh/night-owl.vim',
+    colorscheme = 'night-owl',
+    background = 'dark'
+  }
 }
 
 -- diagnostics
 binds = {
-  [{ mode = 'n', bind = '<leader>xx'}] = '<cmd>TroubleToggle<cr>',
-  [{ mode = 'n', bind = '<leader>xw'}] =
+  [{ mode = 'n', bind = '<leader>tx'}] = '<cmd>TroubleToggle<cr>',
+  [{ mode = 'n', bind = '<leader>tw'}] =
     '<cmd>Trouble workspace_diagnostics<cr>',
-  [{ mode = 'n', bind = '<leader>xd'}] =
+  [{ mode = 'n', bind = '<leader>td'}] =
     '<cmd>Trouble document_diagnostics<cr>',
-  [{ mode = 'n', bind = '<leader>xl'}] = '<cmd>Trouble loclist<cr>',
-  [{ mode = 'n', bind = '<leader>xq'}] = '<cmd>Trouble quickfix<cr>',
+  [{ mode = 'n', bind = '<leader>tl'}] = '<cmd>Trouble loclist<cr>',
+  [{ mode = 'n', bind = '<leader>tq'}] = '<cmd>Trouble quickfix<cr>',
   [{ mode = 'n', bind = '<leader>gR'}] = '<cmd>Trouble lsp_references<cr>',
 }
 
