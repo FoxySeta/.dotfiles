@@ -1,8 +1,10 @@
 *
 !README.md
 !LICENSE
+!.gitconfig
 !.gitignore
 !.gitattributes
+!**.lua
 
 !/.config/
 !/.config/**
@@ -14,4 +16,3 @@
 !/.fonts/**
 !/.themes/
 !/.themes/**
-!**.lua

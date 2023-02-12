@@ -1,0 +1,34 @@
+[user]
+	email = stefano.volpe2@studio.unibo.it
+	name = Stefano Volpe
+  signingkey = C8DF955CE6A01609
+
+[core]
+  editor = nvim
+	pager = less -FX
+
+[pull]
+  rebase = false
+
+[push]
+  rebase = false
+
+[init]
+  defaultBranch = main
+
+[commit]
+  gpgsign = true
+
+[mergetool]
+  keepBackup = true
+
+[merge]
+  tool = nvimdiff
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[color]
+	ui = true
