@@ -1,0 +1,10 @@
+show=run
+width=5%
+height=25%
+prompt=
+normal_window=true
+hide_scroll=true
+matching=fuzzy
+insensitive=true
+dynamic_lines=true
+style=~/.config/wofi/style.css

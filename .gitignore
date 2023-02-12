@@ -1,0 +1,17 @@
+*
+!README.md
+!LICENSE
+!.gitignore
+!.gitattributes
+
+!/.config/
+!/.config/**
+/.config/grammarly-languageserver/
+/.config/grammarly-languageserver/**
+/.config/sublime-music/
+/.config/sublime-music/**
+!/.fonts/
+!/.fonts/**
+!/.themes/
+!/.themes/**
+!**.lua

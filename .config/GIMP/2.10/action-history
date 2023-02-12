@@ -1,0 +1,19 @@
+# GIMP action-history
+
+(history-item "dialogs-preferences" 5)
+(history-item "filters-brightness-contrast" 1)
+(history-item "image-scale" 1)
+(history-item "file-open" 1)
+(history-item "image-resize" 1)
+(history-item "file-export-as" 0)
+(history-item "file-quit" 1)
+(history-item "file-save-as" 0)
+(history-item "tools-ellipse-select" 1)
+(history-item "select-all" 0)
+(history-item "filters-exposure" 0)
+(history-item "filters-colorize" 0)
+(history-item "filters-shadows-highlights" 0)
+(history-item "filters-curves" 0)
+(history-item "edit-paste-as-new-image" 1)
+
+# end of action-history
