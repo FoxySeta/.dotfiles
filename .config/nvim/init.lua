@@ -14,7 +14,7 @@ require'visimp'{
   gitsigns = {},
   grammarly = {},
   latex = {
-    tectonic = true
+    texlive = true
   },
   languages = {
     'bash',

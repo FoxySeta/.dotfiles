@@ -207,10 +207,13 @@ settings:
     global: ask
     https://meet.jit.si: true
     https://mictests.com: true
+    https://us02web.zoom.us: true
   content.media.audio_video_capture:
     https://meet.jit.si: true
+    https://us02web.zoom.us: true
   content.media.video_capture:
     https://meet.jit.si: true
+    https://us02web.zoom.us: true
     https://webcamtests.com: true
   content.notifications.enabled:
     https://www.reddit.com: true

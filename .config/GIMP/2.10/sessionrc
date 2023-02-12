@@ -11,8 +11,8 @@
     (size 640 480))
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
-    (position 1725 34)
-    (size 1705 1396)
+    (position 10 34)
+    (size 1900 1036)
     (open-on-exit)
     (aux-info
         (left-docks-width "187")
@@ -84,7 +84,7 @@
     (position 1535 531))
 (session-info "toplevel"
     (factory-entry "gimp-file-open-dialog")
-    (position 1246 410)
+    (position 486 230)
     (size 948 643))
 (session-info "toplevel"
     (factory-entry "gimp-curves-tool-dialog")

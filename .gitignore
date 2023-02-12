@@ -14,5 +14,7 @@
 /.config/sublime-music/**
 !/.fonts/
 !/.fonts/**
+!/.screenshots/
+!/.screenshot/**
 !/.themes/
 !/.themes/**
