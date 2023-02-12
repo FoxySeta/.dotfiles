@@ -11,6 +11,7 @@
 (monitor-yresolution 111)
 (theme-path "/home/foxy/.config/gimp/2.10/themes:${gimp_data_dir}/themes:/home/foxy/.themes")
 (theme "Flat-Remix-GTK-Red-Darkest-NoBorder-2.0")
+(layer-new-opacity 0)
 (fill-options
     (style solid)
     (antialias yes)

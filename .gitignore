@@ -12,6 +12,7 @@
 /.config/grammarly-languageserver/**
 /.config/sublime-music/
 /.config/sublime-music/**
+/.config/tut/accounts.toml
 !/.fonts/
 !/.fonts/**
 !/.screenshots/
