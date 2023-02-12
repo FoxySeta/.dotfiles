@@ -1,5 +1,3 @@
-vim.g["redish_transparent"] = 1
-
 require'visimp'{
   autopairs = {},
   colorizer = {
@@ -9,7 +7,7 @@ require'visimp'{
   },
   defaults = {
     foldmethod = 'marker',
-    tabsize = 4
+    tabsize = 2
   },
   diagnostics = {},
   indentline = {},

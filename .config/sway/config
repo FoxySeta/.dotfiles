@@ -258,6 +258,6 @@ bindsym Control+Shift+Print exec grimshot save screen ~/desktop/$(date +%d-%m-%Y
 
 exec /usr/libexec/pipewire-launcher
 exec /usr/libexec/xdg-desktop-portal-wlr
-exec_always ~/.config/sway/clamshell.sh
+exec_always ~/.config/sway/clamshell.fish
 
 include /etc/sway/config.d/*
